@@ -1,0 +1,16 @@
+<% if(is_tag()){ %>
+    <%- partial('_partial/list') %>
+<% }else{ %>
+<div id="tag" class="tag-container">
+    <%site.tags.forEach(item=>{%>
+    <div class="tag-content">
+        <a class="tag-content-name" href="<%-url_for(item.path)%>">
+            <%- item.name%>
+        </a>
+        <small class="tag-content-length">[<%-item.length%>]</small>
+    </div>
+    <%})%>
+</div>
+<% } %>
+
+

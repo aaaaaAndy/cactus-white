@@ -1,0 +1,27 @@
+<div class="categories-container">
+    <% site.categories.forEach(category_item=>{ %>
+        <div class="categories-card">
+            <div class="categories-card-header">
+                <div class="categories-card-header-content">
+                    <a class="categories-header-a" href="<%- url_for(category_item.path) %>">
+                        <%- category_item.name %>
+                    </a>
+                </div>
+            </div>
+            <div class="categories-card-body">
+                <% category_item.posts.forEach((post_item, index = 0)=>{ %>
+                    <article class="article-item">
+                        <a
+                                class="article-item-link"
+                                href="<%- url_for(post_item.path) %>"
+                                title="<%- post_item.title %>"
+                        >
+                            <%- index + 1 %>.
+                            <%- post_item.title %>
+                        </a>
+                    </article>
+                <% }) %>
+            </div>
+        </div>
+    <% }) %>
+</div>
