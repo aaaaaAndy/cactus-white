@@ -45,21 +45,32 @@ article
             height: 100%
             margin-top: 0
     blockquote
+        position: relative
         background: inherit;
-        color: #ccffb6
+        color: #1f291b
         border-left: 0px solid #ccc;
+        background-color lightgray
         margin: 1rem 10px;
         padding: 0.5em 10px;
         quotes: "\201C""\201D""\2018""\2019"
         p
           margin: 0
         &:before
-            color: #ccffb6;
+            color: $color-accent;
             content: "\201C";
             font-size: 2em;
             line-height: 0.1em;
             margin-right: 0.25em;
             vertical-align: -0.4em
+        &:after
+          content ""
+          display: block
+          position: absolute
+          left -4px
+          top 0
+          width 4px
+          height 100%
+          background-color: $color-accent;
         footer
             color: #666
             font-size: 11px

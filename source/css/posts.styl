@@ -1,5 +1,8 @@
 .post-list
   .post
+    .post-title
+      &::before
+        content: "✏️"
     .post-date
       //list-style-type none
       padding-left 0
@@ -15,3 +18,10 @@
           content "👨‍💻‍"
           position relative
           left 4px
+    .more-link
+      color #2bbc8a
+      background-image: none
+      border-bottom: 1px solid #2bbc8a
+  .pagination
+    padding-left 0
+    text-align: center
